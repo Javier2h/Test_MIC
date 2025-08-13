@@ -24,6 +24,12 @@ $services = [
 	'auth' => [
         'url' => 'http://localhost:8002', // ms-Auth en el puerto 8002
     ],
+	'empleados' => [
+		'url' => 'http://localhost:8003', // ms-Empleados en el puerto 8003
+	],
+	'mantenimientos' => [
+		'url' => 'http://localhost:8004', // ms-Mantenimientos en el puerto 8004
+	],
 	// Puedes agregar más microservicios aquí
 ];
 
@@ -40,19 +46,22 @@ $serviceKey = $segments[0] ?? '';
 if (isset($services[$serviceKey])) {
 	// Log para comprobar que la petición pasa por el API Gateway
 	file_put_contents(__DIR__ . '/gateway.log', date('Y-m-d H:i:s') . " - Acceso a microservicio '$serviceKey' ruta: $requestUri\n", FILE_APPEND);
-	// Construir la URL destino (eliminar el prefijo del microservicio)
 	$serviceUrl = rtrim($services[$serviceKey]['url'], '/');
 	$subPath = implode('/', array_slice($segments, 1));
-	// Si el microservicio es 'auth', elimina el prefijo 'auth' para que /auth/login apunte a /login
 	if ($serviceKey === 'auth') {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';
 	} else if ($serviceKey === 'atracciones') {
-		// Reenviar el path original (por ejemplo, /atracciones) al microservicio
-		$serviceUrl .= $subPath ? '/' . $subPath : '';
-		// Si no hay subPath, agregar /atracciones
-		if (!$subPath) {
-			$serviceUrl .= '/atracciones';
-		}
+		// Siempre reenviamos la ruta completa a ms-atracciones
+		$forwardPath = $path; // $path ya incluye /atracciones y cualquier subruta
+		$serviceUrl .= '/' . $forwardPath;
+	} else if ($serviceKey === 'empleados') {
+		// Siempre reenviamos la ruta completa a ms-empleados
+		$forwardPath = $path; // $path ya incluye /empleados y cualquier subruta
+		$serviceUrl .= '/' . $forwardPath;
+	} else if ($serviceKey === 'mantenimientos') {
+		// Siempre reenviamos la ruta completa a ms-mantenimientos
+		$forwardPath = $path; // $path ya incluye /mantenimientos y cualquier subruta
+		$serviceUrl .= '/' . $forwardPath;
 	} else {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';
 	}
