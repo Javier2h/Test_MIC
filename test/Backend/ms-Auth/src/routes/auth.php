@@ -6,6 +6,13 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 return function (App $app, $pdo, $config) {
+    // Obtener todos los usuarios
+    $app->get('/usuarios', function ($request, $response) use ($pdo) {
+        $stmt = $pdo->query('SELECT id_usuario, nombre_usuario, rol, estado FROM usuario');
+        $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $response->getBody()->write(json_encode($usuarios));
+        return $response->withHeader('Content-Type', 'application/json');
+    });
     $app->post('/register', function ($request, $response) use ($pdo) {
         $data = $request->getParsedBody();
         if ($data === null) {
@@ -43,7 +50,11 @@ return function (App $app, $pdo, $config) {
             'exp' => time() + $config['jwt']['expire']
         ];
         $jwt = JWT::encode($payload, $config['jwt']['secret'], 'HS256');
-        $response->getBody()->write(json_encode(['token' => $jwt]));
+        $response->getBody()->write(json_encode([
+            'token' => $jwt,
+            'nombre_usuario' => $user['nombre_usuario'],
+            'rol' => $user['rol']
+        ]));
         return $response->withHeader('Content-Type', 'application/json');
     });
 

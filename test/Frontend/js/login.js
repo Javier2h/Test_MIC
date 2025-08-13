@@ -16,6 +16,14 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 		});
 		const data = await response.json();
 		if (response.ok && data.token) {
+			// Guardar el token, nombre de usuario y rol en localStorage
+			localStorage.setItem('token', data.token);
+			if (data.nombre_usuario) {
+				localStorage.setItem('nombre_usuario', data.nombre_usuario);
+			}
+			if (data.rol) {
+				localStorage.setItem('rol', data.rol);
+			}
 			messageDiv.textContent = '¡Login exitoso!';
 			messageDiv.classList.add('success');
 			alert('Login exitoso. Serás redirigido al menú principal.');
