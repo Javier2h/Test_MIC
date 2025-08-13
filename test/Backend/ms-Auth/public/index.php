@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . '/../vendor/autoload.php';
 $config = require __DIR__ . '/../src/config.php';
 use Slim\Factory\AppFactory;

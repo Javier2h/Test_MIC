@@ -1,5 +1,5 @@
 <?php
-// CORS headers
+// CORS headers (siempre incluir en la respuesta)
 if (isset($_SERVER['HTTP_ORIGIN'])) {
 	header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
 	header('Access-Control-Allow-Credentials: true');
@@ -43,13 +43,26 @@ if (isset($services[$serviceKey])) {
 	// Construir la URL destino (eliminar el prefijo del microservicio)
 	$serviceUrl = rtrim($services[$serviceKey]['url'], '/');
 	$subPath = implode('/', array_slice($segments, 1));
-	if ($subPath) {
-		$serviceUrl .= '/' . $subPath;
+	// Si el microservicio es 'auth', elimina el prefijo 'auth' para que /auth/login apunte a /login
+	if ($serviceKey === 'auth') {
+		$serviceUrl .= $subPath ? '/' . $subPath : '';
+	} else if ($serviceKey === 'atracciones') {
+		// Reenviar el path original (por ejemplo, /atracciones) al microservicio
+		$serviceUrl .= $subPath ? '/' . $subPath : '';
+		// Si no hay subPath, agregar /atracciones
+		if (!$subPath) {
+			$serviceUrl .= '/atracciones';
+		}
+	} else {
+		$serviceUrl .= $subPath ? '/' . $subPath : '';
 	}
 	$queryString = $_SERVER['QUERY_STRING'] ?? '';
 	if ($queryString) {
 		$serviceUrl .= '?' . $queryString;
 	}
+
+	// Log de depuración para ver la URL de destino
+	file_put_contents(__DIR__ . '/gateway.log', date('Y-m-d H:i:s') . " - Reenviando a: $serviceUrl\n", FILE_APPEND);
 
 	// Preparar la petición cURL
 	$ch = curl_init($serviceUrl);
@@ -78,6 +91,12 @@ if (isset($services[$serviceKey])) {
 	// Devolver la respuesta del microservicio
 	if ($contentType) {
 		header('Content-Type: ' . $contentType);
+	}
+	// Reenviar headers CORS en todas las respuestas
+	if (isset($_SERVER['HTTP_ORIGIN'])) {
+		header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+		header('Access-Control-Allow-Credentials: true');
+		header('Access-Control-Max-Age: 86400');
 	}
 	http_response_code($httpCode);
 	echo $response;

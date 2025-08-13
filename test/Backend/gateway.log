@@ -7,3 +7,127 @@
 2025-08-13 07:54:32 - Acceso a microservicio 'auth' ruta: /auth/login
 2025-08-13 07:55:31 - Acceso a microservicio 'atracciones' ruta: /atracciones
 2025-08-13 07:55:41 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:26:04 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:26:06 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:28:59 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:29:00 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:29:00 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:29:01 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:30:36 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:33:56 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:34:17 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-13 23:34:41 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:35:41 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:36:43 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:38:52 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:39:18 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:44:10 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:44:15 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:45:06 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:49:57 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:53:28 - Acceso a microservicio 'auth' ruta: /auth/register
+2025-08-13 23:53:28 - Reenviando a: http://localhost:8002/register
+2025-08-13 23:53:44 - Acceso a microservicio 'auth' ruta: /auth/register
+2025-08-13 23:53:44 - Reenviando a: http://localhost:8002/register
+2025-08-13 23:54:33 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:54:33 - Reenviando a: http://localhost:8001
+2025-08-13 23:56:04 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:04 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:13 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:13 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:28 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:28 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:28 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:28 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:41 - Acceso a microservicio 'atracciones' ruta: /atracciones/4
+2025-08-13 23:56:41 - Reenviando a: http://localhost:8001/4
+2025-08-13 23:56:41 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:41 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:44 - Acceso a microservicio 'atracciones' ruta: /atracciones/4
+2025-08-13 23:56:44 - Reenviando a: http://localhost:8001/4
+2025-08-13 23:56:44 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:44 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:49 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:49 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:56:53 - Acceso a microservicio 'atracciones' ruta: /atracciones/4
+2025-08-13 23:56:53 - Reenviando a: http://localhost:8001/4
+2025-08-13 23:56:53 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:56:53 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:57:03 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:57:03 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:57:05 - Acceso a microservicio 'atracciones' ruta: /atracciones/4
+2025-08-13 23:57:05 - Reenviando a: http://localhost:8001/4
+2025-08-13 23:57:05 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:57:05 - Reenviando a: http://localhost:8001/atracciones
+2025-08-13 23:58:13 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-13 23:58:13 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:00:41 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:00:41 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:00:44 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:00:44 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:00:45 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:00:45 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:00:47 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:00:47 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:00:47 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:00:47 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:01:01 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:01:01 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:01:01 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:01:01 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:01:10 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:01:10 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:01:10 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:01:10 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:02:03 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:02:03 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:02:03 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:02:03 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:02:12 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:02:12 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:02:23 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:02:23 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:02:30 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:02:30 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:02:31 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:02:31 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:02:35 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:02:35 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:03:04 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:03:04 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:03:14 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:03:14 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:03:14 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:03:14 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:03:48 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:03:48 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:03:53 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:03:53 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:03:53 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:03:53 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:07:50 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:07:50 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:08:49 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:08:49 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:09:13 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:09:13 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:10:19 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:10:19 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:11:03 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:11:03 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:11:10 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:11:10 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:11:38 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:11:38 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:12:05 - Acceso a microservicio 'atracciones' ruta: /atracciones/6
+2025-08-14 00:12:05 - Reenviando a: http://localhost:8001/6
+2025-08-14 00:12:31 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:12:31 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:16:04 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:16:04 - Reenviando a: http://localhost:8001atracciones/atracciones
+2025-08-14 00:16:21 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:16:21 - Reenviando a: http://localhost:8001/atracciones
+2025-08-14 00:16:31 - Acceso a microservicio 'atracciones' ruta: /atracciones/5
+2025-08-14 00:16:31 - Reenviando a: http://localhost:8001/5
+2025-08-14 00:16:31 - Acceso a microservicio 'atracciones' ruta: /atracciones
+2025-08-14 00:16:31 - Reenviando a: http://localhost:8001/atracciones
