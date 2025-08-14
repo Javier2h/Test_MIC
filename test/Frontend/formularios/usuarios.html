@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="../css/empleados.css">
+</head>
+<body>
+    <button onclick="window.location.href='menu.html'" style="margin: 20px;">Regresar al Menú</button>
+    <div class="usuarios-container">
+        <h2>Gestión de Usuarios</h2>
+        <form id="usuarioForm">
+            <input type="hidden" name="id_usuario" id="id_usuario">
+            <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+            <input type="password" name="contrasena" placeholder="Contraseña" required>
+            <input type="text" name="rol" placeholder="Rol" required>
+            <select name="estado" required>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+            <button type="submit" name="submitBtn">Agregar</button>
+            <button type="button" onclick="document.getElementById('usuarioForm').reset();">Limpiar</button>
+        </form>
+        <div class="message" id="message"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="usuariosTableBody">
+                <!-- Datos aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/usuarios.js"></script>
+</body>
+</html>

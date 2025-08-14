@@ -15,7 +15,7 @@ $app = AppFactory::create();
 // Middleware para parsear JSON
 $app->addBodyParsingMiddleware();
 
-// Rutas de empleados
-(require __DIR__ . '/../src/routes/empleados.php')($app);
+// Rutas de usuarios
+(require __DIR__ . '/../src/routes/users.php')($app);
 
 $app->run();
