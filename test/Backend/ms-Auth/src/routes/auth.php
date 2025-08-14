@@ -4,16 +4,51 @@ use Slim\Psr7\Response;
 use App\models\Usuario;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+require_once __DIR__ . '/../permissions.php';
 
 return function (App $app, $pdo, $config) {
-    // Obtener todos los usuarios
+    // Obtener todos los usuarios (solo para supervisor, desarrollador, admin)
     $app->get('/usuarios', function ($request, $response) use ($pdo) {
+        $authHeader = $request->getHeaderLine('Authorization');
+        if (!$authHeader || !preg_match('/Bearer\s+(.*)$/i', $authHeader, $matches)) {
+            $response->getBody()->write(json_encode(['error' => 'Token no proporcionado']));
+            return $response->withStatus(401)->withHeader('Content-Type', 'application/json');
+        }
+        $jwt = $matches[1];
+        try {
+            $decoded = JWT::decode($jwt, new Key($GLOBALS['config']['jwt']['secret'], 'HS256'));
+            $rol = $decoded->rol;
+            if (!tienePermiso($rol, 'ver')) {
+                $response->getBody()->write(json_encode(['error' => 'No tienes permiso para ver usuarios']));
+                return $response->withStatus(403)->withHeader('Content-Type', 'application/json');
+            }
+        } catch (Exception $e) {
+            $response->getBody()->write(json_encode(['error' => 'Token inválido']));
+            return $response->withStatus(401)->withHeader('Content-Type', 'application/json');
+        }
         $stmt = $pdo->query('SELECT id_usuario, nombre_usuario, rol, estado FROM usuario');
         $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $response->getBody()->write(json_encode($usuarios));
         return $response->withHeader('Content-Type', 'application/json');
     });
     $app->post('/register', function ($request, $response) use ($pdo) {
+        $authHeader = $request->getHeaderLine('Authorization');
+        if (!$authHeader || !preg_match('/Bearer\s+(.*)$/i', $authHeader, $matches)) {
+            $response->getBody()->write(json_encode(['error' => 'Token no proporcionado']));
+            return $response->withStatus(401)->withHeader('Content-Type', 'application/json');
+        }
+        $jwt = $matches[1];
+        try {
+            $decoded = JWT::decode($jwt, new Key($GLOBALS['config']['jwt']['secret'], 'HS256'));
+            $rol = $decoded->rol;
+            if (!tienePermiso($rol, 'crear')) {
+                $response->getBody()->write(json_encode(['error' => 'No tienes permiso para crear usuarios']));
+                return $response->withStatus(403)->withHeader('Content-Type', 'application/json');
+            }
+        } catch (Exception $e) {
+            $response->getBody()->write(json_encode(['error' => 'Token inválido']));
+            return $response->withStatus(401)->withHeader('Content-Type', 'application/json');
+        }
         $data = $request->getParsedBody();
         if ($data === null) {
             $data = json_decode($request->getBody()->getContents(), true);
