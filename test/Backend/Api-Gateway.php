@@ -18,20 +18,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Configuración de microservicios
 $services = [
-	'atracciones' => [
+	'categorias' => [
 		'url' => 'http://localhost:8001', // Cambia el puerto/url según tu microservicio
 	],
 	'auth' => [
         'url' => 'http://localhost:8002', // ms-Auth en el puerto 8002
     ],
-	'empleados' => [
-		'url' => 'http://localhost:8003', // ms-Empleados en el puerto 8003
+	'clientes' => [
+		'url' => 'http://localhost:8003', // ms-Clientes en el puerto 8003
 	],
-	'mantenimientos' => [
-		'url' => 'http://localhost:8004', // ms-Mantenimientos en el puerto 8004
+	'productos' => [
+		'url' => 'http://localhost:8004', // ms-Productos en el puerto 8004
 	],
 	'users' => [
 		'url' => 'http://localhost:8005', // ms-Usuarios en el puerto 8005
+	],
+	'ordenes' => [
+		'url' => 'http://localhost:8006', // ms-Ordenes en el puerto 8006
 	],
 	// Puedes agregar más microservicios aquí
 ];
@@ -53,21 +56,25 @@ if (isset($services[$serviceKey])) {
 	$subPath = implode('/', array_slice($segments, 1));
 	if ($serviceKey === 'auth') {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';
-	} else if ($serviceKey === 'atracciones') {
+	} else if ($serviceKey === 'categorias') {
 		// Siempre reenviamos la ruta completa a ms-atracciones
 		$forwardPath = $path; // $path ya incluye /atracciones y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
-	} else if ($serviceKey === 'empleados') {
-		// Siempre reenviamos la ruta completa a ms-empleados
-		$forwardPath = $path; // $path ya incluye /empleados y cualquier subruta
+	} else if ($serviceKey === 'clientes') {
+		// Siempre reenviamos la ruta completa a ms-clientes
+		$forwardPath = $path; // $path ya incluye /clientes y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
-	} else if ($serviceKey === 'mantenimientos') {
-		// Siempre reenviamos la ruta completa a ms-mantenimientos
-		$forwardPath = $path; // $path ya incluye /mantenimientos y cualquier subruta
+	} else if ($serviceKey === 'productos') {
+		// Siempre reenviamos la ruta completa a ms-productos
+		$forwardPath = $path; // $path ya incluye /productos y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
 	} else if ($serviceKey === 'users') {
 		// Siempre reenviamos la ruta completa a ms-users
 		$forwardPath = $path; // $path ya incluye /users y cualquier subruta
+		$serviceUrl .= '/' . $forwardPath;
+	} else if ($serviceKey === 'ordenes') {
+		// Siempre reenviamos la ruta completa a ms-ordenes
+		$forwardPath = $path; // $path ya incluye /ordenes y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
 	} else {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';

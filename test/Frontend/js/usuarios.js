@@ -1,5 +1,6 @@
 // usuarios.js
-// Lógica para gestionar usuarios (CRUD)
+// Solo muestra id_usuario, nombre_usuario y rol
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('usuarioForm');
     const messageDiv = document.getElementById('message');
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function fetchUsuarios() {
-        tableBody.innerHTML = '<tr><td colspan="5">Cargando...</td></tr>';
+        tableBody.innerHTML = '<tr><td colspan="4">Cargando...</td></tr>';
         try {
             const res = await fetch(apiUrl);
             const data = await res.json();
@@ -31,24 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>${usuario.id_usuario}</td>
                     <td>${usuario.nombre_usuario}</td>
                     <td>${usuario.rol}</td>
-                    <td>${usuario.estado}</td>
                     <td class="actions-btns">
-                        <button onclick="editUsuario(${usuario.id_usuario}, '${usuario.nombre_usuario.replace(/'/g, "&#39;")}', '${usuario.rol}', '${usuario.estado}')">Editar</button>
-                        <button onclick="deleteUsuario(${usuario.id_usuario})">Eliminar</button>
+                        <button class="action-btn" onclick="editUsuario(${usuario.id_usuario}, '${usuario.nombre_usuario.replace(/'/g, "&#39;")}', '${usuario.rol}')">Editar</button>
+                        <button class="action-btn" onclick="deleteUsuario(${usuario.id_usuario})">Eliminar</button>
                     </td>
                 </tr>`;
             });
         } catch {
-            tableBody.innerHTML = '<tr><td colspan="5">Error al cargar datos</td></tr>';
+            tableBody.innerHTML = '<tr><td colspan="4">Error al cargar datos</td></tr>';
         }
     }
 
-    window.editUsuario = function(id, nombre_usuario, rol, estado) {
+    window.editUsuario = function(id, nombre_usuario, rol) {
         editId = id;
         form.id_usuario.value = id;
         form.nombre_usuario.value = nombre_usuario;
-        form.rol.value = rol;
-        form.estado.value = estado;
+        document.getElementById('rol').value = rol;
         form['submitBtn'].textContent = 'Actualizar';
     }
 
@@ -68,9 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const data = {
             nombre_usuario: form.nombre_usuario.value,
-            contrasena: form.contrasena.value,
-            rol: form.rol.value,
-            estado: form.estado.value
+            contrasena: form.contrasena ? form.contrasena.value : '',
+            rol: document.getElementById('rol').value,
         };
         if (editId) {
             fetch(`${apiUrl}/${editId}`, {
@@ -83,23 +81,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     showMessage('Usuario actualizado');
                     fetchUsuarios();
                     clearForm();
+                    if (form.contrasena) form.contrasena.value = '';
                 } else {
                     showMessage('Error al actualizar', 'error');
                 }
             })
             .catch(() => showMessage('Error al actualizar', 'error'));
         } else {
-            // Usar endpoint de registro para crear usuario con contraseña hasheada
-            fetch('http://localhost:8000/auth/register', {
+            fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             })
-            .then(r => r.json())
-            .then(() => {
-                showMessage('Usuario agregado');
-                fetchUsuarios();
-                clearForm();
+            .then(r => {
+                if (r.status === 201) {
+                    showMessage('Usuario agregado');
+                    fetchUsuarios();
+                    clearForm();
+                    if (form.contrasena) form.contrasena.value = '';
+                    return r.json();
+                } else {
+                    showMessage('Error al agregar', 'error');
+                    return Promise.reject();
+                }
             })
             .catch(() => showMessage('Error al agregar', 'error'));
         }

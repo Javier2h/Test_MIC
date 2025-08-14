@@ -5,38 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Usuarios</title>
     <link rel="stylesheet" href="../css/empleados.css">
+    <style>
+        body { background: #f7f7f7; }
+        .usuarios-container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 30px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .form-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .form-container input, .form-container select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; min-width: 160px; }
+        .btn { background-color: #007bff; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+        .btn:hover { background-color: #0056b3; }
+        .table-container { overflow-x: auto; margin-top: 10px; }
+        #tablaUsuarios { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        #tablaUsuarios th, #tablaUsuarios td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #e0e0e0; }
+        #tablaUsuarios th { background-color: #0080ff; color: white; }
+        #tablaUsuarios tr:last-child td { border-bottom: none; }
+        .actions-btns { display: flex; justify-content: center; gap: 8px; }
+        .action-btn { padding: 5px 12px; border: none; border-radius: 4px; cursor: pointer; background: #007bff; color: white; transition: background 0.2s; }
+        .action-btn:hover { background: #0056b3; }
+    </style>
 </head>
 <body>
-    <button onclick="window.location.href='menu.html'" style="margin: 20px;">Regresar al Menú</button>
     <div class="usuarios-container">
-        <h2>Gestión de Usuarios</h2>
-        <form id="usuarioForm">
+        <h1>Gestión de Usuarios</h1>
+        <form id="usuarioForm" class="form-container">
             <input type="hidden" name="id_usuario" id="id_usuario">
-            <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
-            <input type="password" name="contrasena" placeholder="Contraseña" required>
-            <input type="text" name="rol" placeholder="Rol" required>
-            <select name="estado" required>
-                <option value="activo">Activo</option>
-                <option value="inactivo">Inactivo</option>
+            <input type="text" name="nombre_usuario" id="nombre_usuario" placeholder="Nombre de usuario" required>
+            <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+            <select name="rol" id="rol" required>
+                <option value="">Selecciona un rol</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Supervisor">Supervisor</option>
+                <option value="Desarrollador">Desarrollador</option>
             </select>
-            <button type="submit" name="submitBtn">Agregar</button>
-            <button type="button" onclick="document.getElementById('usuarioForm').reset();">Limpiar</button>
+            <button type="submit" name="submitBtn" class="btn">Agregar</button>
+            <button type="button" onclick="document.getElementById('usuarioForm').reset();" class="btn">Limpiar</button>
         </form>
         <div class="message" id="message"></div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Usuario</th>
-                    <th>Rol</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="usuariosTableBody">
-                <!-- Datos aquí -->
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table id="tablaUsuarios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="usuariosTableBody">
+                    <!-- Datos aquí -->
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../js/usuarios.js"></script>
 </body>

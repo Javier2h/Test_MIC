@@ -8,7 +8,7 @@ use Firebase\JWT\Key;
 return function (App $app, $pdo, $config) {
     // Obtener todos los usuarios
     $app->get('/usuarios', function ($request, $response) use ($pdo) {
-        $stmt = $pdo->query('SELECT id_usuario, nombre_usuario, rol, estado FROM usuario');
+        $stmt = $pdo->query('SELECT id_usuario, nombre_usuario, rol FROM usuarios');
         $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $response->getBody()->write(json_encode($usuarios));
         return $response->withHeader('Content-Type', 'application/json');
@@ -27,7 +27,7 @@ return function (App $app, $pdo, $config) {
             $response->getBody()->write(json_encode(['error' => 'Usuario ya existe']));
             return $response->withStatus(409)->withHeader('Content-Type', 'application/json');
         }
-        $usuario->create($data['nombre_usuario'], $data['contrasena'], $data['rol'] ?? 'user', $data['estado'] ?? 'activo');
+        $usuario->create($data['nombre_usuario'], $data['contrasena'], $data['rol'] ?? 'user');
         $response->getBody()->write(json_encode(['success' => true]));
         return $response->withHeader('Content-Type', 'application/json');
     });
@@ -42,10 +42,6 @@ return function (App $app, $pdo, $config) {
         if (!$user) {
             $response->getBody()->write(json_encode(['error' => 'Credenciales inválidas']));
             return $response->withStatus(401)->withHeader('Content-Type', 'application/json');
-        }
-        if ($user['estado'] !== 'activo') {
-            $response->getBody()->write(json_encode(['error' => 'Usuario inactivo']));
-            return $response->withStatus(403)->withHeader('Content-Type', 'application/json');
         }
         $payload = [
             'id_usuario' => $user['id_usuario'],

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Órdenes</title>
+    <link rel="stylesheet" href="../css/empleados.css">
+</head>
+<body>
+    <button onclick="window.location.href='menu.html'" style="margin: 20px;">Regresar al Menú</button>
+    <div class="ordenes-container">
+        <h2>Gestión de Órdenes</h2>
+        <form id="ordenForm">
+            <input type="hidden" name="id_orden" id="id_orden">
+            <select name="id_cliente" id="id_cliente" required>
+                <option value="">Seleccione un cliente</option>
+            </select>
+            <input type="datetime-local" name="fecha_orden" placeholder="Fecha de la orden" required>
+            <input type="number" name="total" placeholder="Total" step="0.01" required>
+            <button type="submit" name="submitBtn">Agregar</button>
+            <button type="button" onclick="document.getElementById('ordenForm').reset();">Limpiar</button>
+        </form>
+        <div class="message" id="message"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ID Cliente</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="ordenesTableBody">
+                <!-- Datos aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/ordenes.js"></script>
+</body>
+</html>
