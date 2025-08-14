@@ -1091,3 +1091,35 @@
 2025-08-14 20:39:39 - Reenviando a: http://localhost:8005/users/11
 2025-08-14 20:39:39 - Acceso a microservicio 'users' ruta: /users
 2025-08-14 20:39:39 - Reenviando a: http://localhost:8005/users
+2025-08-14 20:50:36 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-14 20:50:36 - Reenviando a: http://localhost:8006/ordenes
+2025-08-14 20:56:00 - Acceso a microservicio 'auth' ruta: /auth/users
+2025-08-14 20:56:00 - Reenviando a: http://localhost:8002/users
+2025-08-14 20:56:17 - Acceso a microservicio 'auth' ruta: /auth/usuarios
+2025-08-14 20:56:17 - Reenviando a: http://localhost:8002/usuarios
+2025-08-14 20:57:15 - Acceso a microservicio 'users' ruta: /users/usuarios
+2025-08-14 20:57:15 - Reenviando a: http://localhost:8005/users/usuarios
+2025-08-14 20:57:25 - Acceso a microservicio 'users' ruta: /users/users
+2025-08-14 20:57:25 - Reenviando a: http://localhost:8005/users/users
+2025-08-14 20:57:34 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 20:57:34 - Reenviando a: http://localhost:8005/users
+2025-08-14 21:00:07 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 21:00:07 - Reenviando a: http://192.168.100.2:8005/users
+2025-08-14 21:00:16 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 21:00:16 - Reenviando a: http://192.168.100.2:8005/users
+2025-08-14 21:01:07 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 21:01:07 - Reenviando a: http://192.168.100.2:8005/users
+2025-08-14 21:03:42 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 21:03:42 - Reenviando a: http://192.168.100.2:8005/users
+2025-08-14 21:06:21 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:06:21 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:06:53 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:06:53 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:10:08 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:10:08 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:10:11 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 21:10:11 - Reenviando a: http://192.168.100.2:8005/users
+2025-08-14 21:11:03 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:11:03 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:11:05 - Acceso a microservicio 'users' ruta: /users
+2025-08-14 21:11:05 - Reenviando a: http://192.168.100.2:8005/users

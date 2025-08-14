@@ -19,22 +19,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // Configuración de microservicios
 $services = [
 	'categorias' => [
-		'url' => 'http://localhost:8001', // Cambia el puerto/url según tu microservicio
+		'url' => 'http://192.168.100.2:8001', // Cambia el puerto/url según tu microservicio
 	],
 	'auth' => [
-        'url' => 'http://localhost:8002', // ms-Auth en el puerto 8002
+        'url' => 'http://192.168.100.2:8002', // ms-Auth en el puerto 8002
     ],
 	'clientes' => [
-		'url' => 'http://localhost:8003', // ms-Clientes en el puerto 8003
+		'url' => 'http://192.168.100.2:8003', // ms-Clientes en el puerto 8003
 	],
 	'productos' => [
-		'url' => 'http://localhost:8004', // ms-Productos en el puerto 8004
+		'url' => 'http://192.168.100.2:8004', // ms-Productos en el puerto 8004
 	],
 	'users' => [
-		'url' => 'http://localhost:8005', // ms-Usuarios en el puerto 8005
+		'url' => 'http://192.168.100.2:8005', // ms-Usuarios en el puerto 8005
 	],
 	'ordenes' => [
-		'url' => 'http://localhost:8006', // ms-Ordenes en el puerto 8006
+		'url' => 'http://192.168.100.2:8006', // ms-Ordenes en el puerto 8006
 	],
 	// Puedes agregar más microservicios aquí
 ];
