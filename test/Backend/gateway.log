@@ -305,3 +305,17 @@
 2025-08-14 01:52:47 - Reenviando a: http://localhost:8002/login
 2025-08-14 01:57:05 - Acceso a microservicio 'auth' ruta: /auth/login
 2025-08-14 01:57:05 - Reenviando a: http://localhost:8002/login
+2025-08-14 02:16:10 - Acceso a microservicio 'auth' ruta: /auth/usuarios
+2025-08-14 02:16:10 - Reenviando a: http://localhost:8002/usuarios
+2025-08-14 02:22:43 - Acceso a microservicio 'auth' ruta: /auth/usuarios
+2025-08-14 02:22:43 - Reenviando a: http://localhost:8002/usuarios
+2025-08-14 03:33:57 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 03:33:57 - Reenviando a: http://localhost:8002/login
+2025-08-14 03:34:01 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 03:34:01 - Reenviando a: http://localhost:8002/login
+2025-08-14 03:34:30 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 03:34:30 - Reenviando a: http://localhost:8002/login
+2025-08-14 03:46:08 - Acceso a microservicio 'usuarios' ruta: /usuarios
+2025-08-14 03:46:08 - Reenviando a: http://localhost:8005
+2025-08-14 03:49:17 - Acceso a microservicio 'auth' ruta: /auth/usuarios
+2025-08-14 03:49:17 - Reenviando a: http://localhost:8002/usuarios
