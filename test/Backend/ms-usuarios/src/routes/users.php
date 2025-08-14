@@ -45,10 +45,11 @@ return function (App $app) {
     // Actualizar una usuario
     $app->put('/users/{id}', function (Request $request, Response $response, $args) use ($db) {
         $data = $request->getParsedBody();
+        $hashedPassword = password_hash($data['contrasena'], PASSWORD_DEFAULT);
         $stmt = $db->prepare('UPDATE usuario SET nombre_usuario = ?, contrasena = ?, rol = ?, estado = ? WHERE id_usuario = ?');
         $stmt->execute([
             $data['nombre_usuario'],
-            $data['contrasena'],
+            $hashedPassword,
             $data['rol'],
             $data['estado'],
             $args['id']

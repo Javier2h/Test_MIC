@@ -8,6 +8,11 @@
 </head>
 <body>
 	<button onclick="cerrarSesion()" style="position:absolute;top:20px;right:30px;padding:8px 16px;background:#dc3545;color:#fff;border:none;border-radius:5px;cursor:pointer;">Cerrar Sesión</button>
+	<div class="user-info-box">
+        <span class="user-icon">👤</span>
+        <span id="nombreUsuario"></span>
+        <span id="rolUsuario"></span>
+    </div>
 	<div class="menu-container">
 		<h2>Menú Principal</h2>
 		<ul class="menu-list">
@@ -21,11 +26,17 @@
 	<script src="../js/menu.js"></script>
 	<script>
 	function cerrarSesion() {
-		// Aquí puedes limpiar el localStorage/sessionStorage/token si lo usas
 		localStorage.clear();
 		sessionStorage.clear();
 		window.location.href = 'login.html';
 	}
+	// Mostrar nombre_usuario y rol si están en localStorage
+	document.addEventListener('DOMContentLoaded', function() {
+		const nombre = localStorage.getItem('nombre_usuario');
+		const rol = localStorage.getItem('rol');
+		if (nombre) document.getElementById('nombreUsuario').textContent = 'Usuario: ' + nombre;
+		if (rol) document.getElementById('rolUsuario').textContent = 'Rol: ' + rol;
+	});
 	</script>
 </body>
 </html>

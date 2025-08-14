@@ -52,3 +52,32 @@ button:hover {
     background: #b71c1c !important;
     transform: scale(1.05);
 }
+.user-info-box {
+    position: fixed;
+    top: 24px;
+    left: 32px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    padding: 10px 22px 10px 16px;
+    display: flex;
+    align-items: center;
+    font-size: 1.08em;
+    color: #185a9d;
+    min-width: 180px;
+    z-index: 100;
+}
+.user-info-box .user-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #43cea2;
+}
+#rolUsuario {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #2d3e50;
+    background: #e3f6f5;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.98em;
+}
