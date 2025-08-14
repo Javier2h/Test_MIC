@@ -30,6 +30,9 @@ $services = [
 	'mantenimientos' => [
 		'url' => 'http://localhost:8004', // ms-Mantenimientos en el puerto 8004
 	],
+	'users' => [
+		'url' => 'http://localhost:8005', // ms-Usuarios en el puerto 8005
+	],
 	// Puedes agregar más microservicios aquí
 ];
 
@@ -61,6 +64,10 @@ if (isset($services[$serviceKey])) {
 	} else if ($serviceKey === 'mantenimientos') {
 		// Siempre reenviamos la ruta completa a ms-mantenimientos
 		$forwardPath = $path; // $path ya incluye /mantenimientos y cualquier subruta
+		$serviceUrl .= '/' . $forwardPath;
+	} else if ($serviceKey === 'users') {
+		// Siempre reenviamos la ruta completa a ms-users
+		$forwardPath = $path; // $path ya incluye /users y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
 	} else {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';

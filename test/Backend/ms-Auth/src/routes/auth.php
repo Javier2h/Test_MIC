@@ -78,6 +78,10 @@ return function (App $app, $pdo, $config) {
             $response->getBody()->write(json_encode(['error' => 'Credenciales inválidas']));
             return $response->withStatus(401)->withHeader('Content-Type', 'application/json');
         }
+        if ($user['estado'] !== 'activo') {
+            $response->getBody()->write(json_encode(['error' => 'Usuario inactivo']));
+            return $response->withStatus(403)->withHeader('Content-Type', 'application/json');
+        }
         $payload = [
             'id_usuario' => $user['id_usuario'],
             'nombre_usuario' => $user['nombre_usuario'],
