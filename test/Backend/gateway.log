@@ -1123,3 +1123,27 @@
 2025-08-14 21:11:03 - Reenviando a: http://192.168.100.2:8002/login
 2025-08-14 21:11:05 - Acceso a microservicio 'users' ruta: /users
 2025-08-14 21:11:05 - Reenviando a: http://192.168.100.2:8005/users
+2025-08-14 21:49:55 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:49:55 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:50:54 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:50:54 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:51:55 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:51:55 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:52:14 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:52:14 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:54:49 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:54:49 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:58:06 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:58:06 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:58:07 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:58:07 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:58:07 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:58:07 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:58:10 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:58:10 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:58:31 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:58:31 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 21:59:48 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 21:59:48 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-14 22:02:53 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-14 22:02:53 - Reenviando a: http://192.168.100.2:8002/login

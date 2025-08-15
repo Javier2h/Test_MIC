@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchClientes() {
         tableBody.innerHTML = '<tr><td colspan="6">Cargando...</td></tr>';
         try {
-            const res = await fetch(apiUrl);
+            const token = localStorage.getItem('token');
+            const res = await fetch(apiUrl, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            });
             const data = await res.json();
             tableBody.innerHTML = '';
             (data || []).forEach(cli => {

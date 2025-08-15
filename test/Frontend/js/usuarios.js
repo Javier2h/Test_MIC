@@ -23,7 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchUsuarios() {
         tableBody.innerHTML = '<tr><td colspan="4">Cargando...</td></tr>';
         try {
-            const res = await fetch(apiUrl);
+            const token = localStorage.getItem('token');
+            const res = await fetch(apiUrl, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            });
             const data = await res.json();
             tableBody.innerHTML = '';
             (data || []).forEach(usuario => {
@@ -53,7 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.deleteUsuario = function(id) {
         if (confirm('¿Seguro que deseas eliminar este usuario?')) {
-            fetch(`${apiUrl}/${id}`, { method: 'DELETE' })
+            fetch(`${apiUrl}/${id}`, { 
+                method: 'DELETE',
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            })
                 .then(() => {
                     showMessage('Usuario eliminado');
                     fetchUsuarios();
@@ -72,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         if (editId) {
             fetch(`${apiUrl}/${editId}`, {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -89,6 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(() => showMessage('Error al actualizar', 'error'));
         } else {
             fetch(apiUrl, {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

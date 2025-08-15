@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchOrdenes() {
         tableBody.innerHTML = '<tr><td colspan="5">Cargando...</td></tr>';
         try {
-            const res = await fetch(apiUrl);
+            const token = localStorage.getItem('token');
+            const res = await fetch(apiUrl, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            });
             const data = await res.json();
             tableBody.innerHTML = '';
             (data || []).forEach(ord => {
@@ -46,7 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     async function cargarClientes() {
         const select = document.getElementById('id_cliente');
         try {
-            const res = await fetch('http://localhost:8000/clientes');
+            const res = await fetch('http://localhost:8000/clientes', {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            });
             const clientes = await res.json();
             select.innerHTML = '<option value="">Seleccione un cliente</option>';
             clientes.forEach(cli => {
@@ -68,7 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.deleteOrden = function(id) {
         if (confirm('¿Seguro que deseas eliminar esta orden?')) {
-            fetch(`${apiUrl}/${id}`, { method: 'DELETE' })
+            fetch(`${apiUrl}/${id}`, { 
+                method: 'DELETE',
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            })
                 .then(() => {
                     showMessage('Orden eliminada');
                     fetchOrdenes();
@@ -87,6 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         if (editId) {
             fetch(`${apiUrl}/${editId}`, {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -103,6 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(() => showMessage('Error al actualizar', 'error'));
         } else {
             fetch(apiUrl, {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

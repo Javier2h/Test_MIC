@@ -19,8 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	async function fetchCategorias() {
 		tableBody.innerHTML = '<tr><td colspan="3">Cargando...</td></tr>';
+		const token = localStorage.getItem('token');
 		try {
-			const res = await fetch(apiUrl);
+			const res = await fetch(apiUrl, {
+				headers: {
+					'Authorization': 'Bearer ' + token
+				}
+			});
 			const data = await res.json();
 			tableBody.innerHTML = '';
 			(data || []).forEach(cat => {
@@ -48,7 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	window.deleteCategoria = function(id) {
 		if (confirm('¿Seguro que deseas eliminar esta categoría?')) {
-			fetch(`${apiUrl}/${id}`, { method: 'DELETE' })
+			const token = localStorage.getItem('token');
+			fetch(`${apiUrl}/${id}`, {
+				method: 'DELETE',
+				headers: {
+					'Authorization': 'Bearer ' + token
+				}
+			})
 				.then(() => {
 					showMessage('Categoría eliminada');
 					fetchCategorias();
@@ -63,10 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		const data = {
 			nombre_categoria: form.nombre_categoria.value
 		};
+		const token = localStorage.getItem('token');
 		if (editId) {
 			fetch(`${apiUrl}/${editId}`, {
 				method: 'PUT',
-				headers: { 'Content-Type': 'application/json' },
+				headers: {
+					'Content-Type': 'application/json',
+					'Authorization': 'Bearer ' + token
+				},
 				body: JSON.stringify(data)
 			})
 			.then(r => {
@@ -82,7 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else {
 			fetch(apiUrl, {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
+				headers: {
+					'Content-Type': 'application/json',
+					'Authorization': 'Bearer ' + token
+				},
 				body: JSON.stringify(data)
 			})
 			.then(r => r.json())

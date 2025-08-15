@@ -1,4 +1,5 @@
 <?php
+	// ...existing code...
 // CORS headers (siempre incluir en la respuesta)
 if (isset($_SERVER['HTTP_ORIGIN'])) {
 	header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
@@ -50,6 +51,54 @@ $serviceKey = $segments[0] ?? '';
 
 
 if (isset($services[$serviceKey])) {
+	
+    // Detectar si la ruta es /auth/login para no requerir token
+    if ($serviceKey === 'auth' && isset($segments[1]) && $segments[1] === 'login' && $requestMethod === 'POST') {
+        // No requiere token, omitir validación
+    } else {
+        // --- INICIO: Validación de rol y permisos ---
+        // Obtener el JWT del header Authorization
+        $authHeader = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+        $jwt = '';
+        if (preg_match('/Bearer\s+(.*)/i', $authHeader, $matches)) {
+            $jwt = $matches[1];
+        }
+        $userRole = null;
+        if ($jwt) {
+            // Decodificar JWT para obtener el rol
+            require_once __DIR__ . '/ms-Auth/vendor/autoload.php';
+            $config = require __DIR__ . '/ms-Auth/src/config.php';
+            try {
+                $decoded = JWT::decode($jwt, new Key($config['jwt']['secret'], 'HS256'));
+                $userRole = $decoded->rol ?? null;
+            } catch (Exception $e) {
+                http_response_code(401);
+                echo json_encode(['error' => 'Token inválido o expirado']);
+                exit;
+            }
+        } else {
+            http_response_code(401);
+            echo json_encode(['error' => 'No se envió el token de autenticación']);
+            exit;
+        }
+
+        // Validar permisos según el rol
+        if ($userRole === 'supervisor') {
+            // Solo puede hacer GET
+            if ($requestMethod !== 'GET') {
+                http_response_code(403);
+                echo json_encode(['error' => 'Permiso denegado para supervisores']);
+                exit;
+            }
+        } else if ($userRole !== 'admin') {
+            // Si no es admin ni supervisor, denegar
+            http_response_code(403);
+            echo json_encode(['error' => 'Rol no autorizado']);
+            exit;
+        }
+        // --- FIN: Validación de rol y permisos ---
+    }
+
 	// Log para comprobar que la petición pasa por el API Gateway
 	file_put_contents(__DIR__ . '/gateway.log', date('Y-m-d H:i:s') . " - Acceso a microservicio '$serviceKey' ruta: $requestUri\n", FILE_APPEND);
 	$serviceUrl = rtrim($services[$serviceKey]['url'], '/');
