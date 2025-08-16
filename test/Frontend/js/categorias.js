@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	const apiUrl = 'http://192.168.100.177:8000/categorias';
+	const apiUrl = 'http://127.0.0.1:8000/categorias';
 	const form = document.getElementById('categoriaForm');
 	const tableBody = document.getElementById('categoriasTableBody');
 	const messageDiv = document.getElementById('message');

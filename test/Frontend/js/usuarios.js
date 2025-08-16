@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('usuarioForm');
     const messageDiv = document.getElementById('message');
     const tableBody = document.getElementById('usuariosTableBody');
-    const apiUrl = 'http://192.168.100.177:8000/users';
+    const apiUrl = 'http://127.0.0.1:8000/users';
     let editId = null;
 
     function showMessage(msg, type = 'success') {

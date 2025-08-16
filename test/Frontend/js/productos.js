@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('productoForm');
     const messageDiv = document.getElementById('message');
     const tableBody = document.getElementById('productosTableBody');
-    const apiUrl = 'http://192.168.100.177:8000/productos';
-    const categoriasUrl = 'http://192.168.100.177:8000/categorias';
+    const apiUrl = 'http://127.0.0.1:8000/productos';
+    const categoriasUrl = 'http://127.0.0.1:8000/categorias';
     const selectCategoria = document.getElementById('id_categoria');
     let editId = null;
 
