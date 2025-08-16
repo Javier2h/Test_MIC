@@ -30,11 +30,14 @@ return function (App $app) {
     // Crear una nueva orden
     $app->post('/ordenes', function (Request $request, Response $response) use ($db) {
         $data = $request->getParsedBody();
-        $stmt = $db->prepare('INSERT INTO ordenes (id_cliente, fecha_orden, total) VALUES (?, ?, ?)');
+        $stmt = $db->prepare('INSERT INTO ordenes (id_cliente, id_producto, fecha_orden, cantidad, total, estado) VALUES (?, ?, ?, ?, ?, ?)');
         $stmt->execute([
             $data['id_cliente'],
+            $data['id_producto'],
             $data['fecha_orden'],
-            $data['total']
+            $data['cantidad'],
+            $data['total'],
+            $data['estado']
         ]);
         $id = $db->lastInsertId();
         $response->getBody()->write(json_encode(['id_orden' => $id]));
@@ -44,11 +47,14 @@ return function (App $app) {
     // Actualizar una orden
     $app->put('/ordenes/{id}', function (Request $request, Response $response, $args) use ($db) {
         $data = $request->getParsedBody();
-        $stmt = $db->prepare('UPDATE ordenes SET id_cliente = ?, fecha_orden = ?, total = ? WHERE id_orden = ?');
+        $stmt = $db->prepare('UPDATE ordenes SET id_cliente = ?, id_producto = ?, fecha_orden = ?, cantidad = ?, total = ?, estado = ? WHERE id_orden = ?');
         $stmt->execute([
             $data['id_cliente'],
+            $data['id_producto'],
             $data['fecha_orden'],
+            $data['cantidad'],
             $data['total'],
+            $data['estado'],
             $args['id']
         ]);
         return $response->withStatus(204);

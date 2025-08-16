@@ -1,10 +1,13 @@
 // productos.js
 // Lógica para gestionar productos (CRUD)
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('productoForm');
     const messageDiv = document.getElementById('message');
     const tableBody = document.getElementById('productosTableBody');
-    const apiUrl = 'http://192.168.100.2:8000/productos';
+    const apiUrl = 'http://192.168.100.177:8000/productos';
+    const categoriasUrl = 'http://192.168.100.177:8000/categorias';
+    const selectCategoria = document.getElementById('id_categoria');
     let editId = null;
 
     function showMessage(msg, type = 'success') {
@@ -19,16 +22,47 @@ document.addEventListener('DOMContentLoaded', () => {
         form['submitBtn'].textContent = 'Agregar';
     }
 
-    async function fetchProductos() {
-        tableBody.innerHTML = '<tr><td colspan="7">Cargando...</td></tr>';
+    async function cargarCategorias() {
         try {
             const token = localStorage.getItem('token');
+            const res = await fetch(categoriasUrl, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            });
+            const categorias = await res.json();
+            selectCategoria.innerHTML = '<option value="">Seleccione una categoría</option>';
+            (categorias || []).forEach(cat => {
+                selectCategoria.innerHTML += `<option value="${cat.id_categoria}">${cat.nombre_categoria}</option>`;
+            });
+        } catch {
+            selectCategoria.innerHTML = '<option value="">Error al cargar categorías</option>';
+        }
+    }
+
+    async function fetchProductos() {
+        tableBody.innerHTML = '<tr><td colspan="7">Cargando...</td></tr>';
+        const token = localStorage.getItem('token');
+        if (!token) {
+            showMessage('No se encontró token de autenticación. Inicie sesión.', 'error');
+            alert('No se encontró token de autenticación. Inicie sesión.');
+            tableBody.innerHTML = '<tr><td colspan="7">Sin autenticación</td></tr>';
+            return;
+        }
+        try {
             const res = await fetch(apiUrl, {
                 headers: {
                     'Authorization': 'Bearer ' + token
                 }
             });
-            const data = await res.json();
+            let data;
+            try { data = await res.json(); } catch { data = null; }
+            if (data && data.error && (data.error.includes('Rol no autorizado') || data.error.includes('Permiso denegado') || data.error.includes('no permitido'))) {
+                showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                alert('Tu rol no tiene permitido realizar esta acción.');
+                tableBody.innerHTML = '<tr><td colspan="7">Acceso denegado por rol</td></tr>';
+                return;
+            }
             tableBody.innerHTML = '';
             (data || []).forEach(prod => {
                 tableBody.innerHTML += `
@@ -57,24 +91,34 @@ document.addEventListener('DOMContentLoaded', () => {
         form.descripcion.value = descripcion;
         form.precio.value = precio;
         form.stock.value = stock;
-        form.id_categoria.value = id_categoria;
+        selectCategoria.value = id_categoria;
         form['submitBtn'].textContent = 'Actualizar';
     }
 
     window.deleteProducto = function(id) {
         if (confirm('¿Seguro que deseas eliminar este producto?')) {
-            fetch(`${apiUrl}/${id}`, { 
+            const token = localStorage.getItem('token');
+            fetch(`${apiUrl}/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    'Authorization': 'Bearer ' + token
                 }
             })
-                .then(() => {
+            .then(async r => {
+                let resp = null;
+                try { resp = await r.json(); } catch {}
+                if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                    showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                    alert('Tu rol no tiene permitido realizar esta acción.');
+                } else if (r.ok) {
                     showMessage('Producto eliminado');
                     fetchProductos();
                     clearForm();
-                })
-                .catch(() => showMessage('Error al eliminar', 'error'));
+                } else {
+                    showMessage('Error al eliminar', 'error');
+                }
+            })
+            .catch(() => showMessage('Error al eliminar', 'error'));
         }
     }
 
@@ -87,17 +131,23 @@ document.addEventListener('DOMContentLoaded', () => {
             stock: parseInt(form.stock.value),
             id_categoria: parseInt(form.id_categoria.value)
         };
+        const token = localStorage.getItem('token');
         if (editId) {
             fetch(`${apiUrl}/${editId}`, {
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token
+                },
                 body: JSON.stringify(data)
             })
-            .then(r => {
-                if (r.ok) {
+            .then(async r => {
+                let resp = null;
+                try { resp = await r.json(); } catch {}
+                if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                    showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                    alert('Tu rol no tiene permitido realizar esta acción.');
+                } else if (r.ok) {
                     showMessage('Producto actualizado');
                     fetchProductos();
                     clearForm();
@@ -108,22 +158,30 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(() => showMessage('Error al actualizar', 'error'));
         } else {
             fetch(apiUrl, {
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token
+                },
                 body: JSON.stringify(data)
             })
-            .then(r => r.json())
-            .then(() => {
-                showMessage('Producto agregado');
-                fetchProductos();
-                clearForm();
+            .then(async r => {
+                let resp = null;
+                try { resp = await r.json(); } catch {}
+                if (r.status === 201 || r.ok) {
+                    showMessage('Producto agregado');
+                    fetchProductos();
+                    clearForm();
+                } else if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                    showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                    alert('Tu rol no tiene permitido realizar esta acción.');
+                } else {
+                    showMessage('Error al agregar', 'error');
+                }
             })
             .catch(() => showMessage('Error al agregar', 'error'));
         }
     });
 
-    fetchProductos();
+    cargarCategorias().then(fetchProductos);
 });

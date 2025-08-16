@@ -1,5 +1,8 @@
 <?php
-	// ...existing code...
+require_once __DIR__ . '/ms-Auth/vendor/autoload.php';
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+// ...existing code...
 // CORS headers (siempre incluir en la respuesta)
 if (isset($_SERVER['HTTP_ORIGIN'])) {
 	header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
@@ -20,22 +23,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // Configuración de microservicios
 $services = [
 	'categorias' => [
-		'url' => 'http://192.168.100.2:8001', // Cambia el puerto/url según tu microservicio
+		'url' => 'http://192.168.100.177:8001', // Cambia el puerto/url según tu microservicio
 	],
 	'auth' => [
-        'url' => 'http://192.168.100.2:8002', // ms-Auth en el puerto 8002
+        'url' => 'http://192.168.100.177:8002', // ms-Auth en el puerto 8002
     ],
 	'clientes' => [
-		'url' => 'http://192.168.100.2:8003', // ms-Clientes en el puerto 8003
+		'url' => 'http://192.168.100.177:8003', // ms-Clientes en el puerto 8003
 	],
 	'productos' => [
-		'url' => 'http://192.168.100.2:8004', // ms-Productos en el puerto 8004
+		'url' => 'http://192.168.100.177:8004', // ms-Productos en el puerto 8004
 	],
 	'users' => [
-		'url' => 'http://192.168.100.2:8005', // ms-Usuarios en el puerto 8005
+		'url' => 'http://192.168.100.177:8005', // ms-Usuarios en el puerto 8005
 	],
 	'ordenes' => [
-		'url' => 'http://192.168.100.2:8006', // ms-Ordenes en el puerto 8006
+		'url' => 'http://192.168.100.177:8006', // ms-Ordenes en el puerto 8006
 	],
 	// Puedes agregar más microservicios aquí
 ];
@@ -64,38 +67,42 @@ if (isset($services[$serviceKey])) {
             $jwt = $matches[1];
         }
         $userRole = null;
-        if ($jwt) {
-            // Decodificar JWT para obtener el rol
-            require_once __DIR__ . '/ms-Auth/vendor/autoload.php';
-            $config = require __DIR__ . '/ms-Auth/src/config.php';
-            try {
-                $decoded = JWT::decode($jwt, new Key($config['jwt']['secret'], 'HS256'));
-                $userRole = $decoded->rol ?? null;
-            } catch (Exception $e) {
-                http_response_code(401);
-                echo json_encode(['error' => 'Token inválido o expirado']);
-                exit;
-            }
-        } else {
-            http_response_code(401);
-            echo json_encode(['error' => 'No se envió el token de autenticación']);
-            exit;
-        }
+		if ($jwt) {
+			// Decodificar JWT para obtener el rol
+			$config = require __DIR__ . '/ms-Auth/src/config.php';
+			try {
+				$decoded = JWT::decode($jwt, new Key($config['jwt']['secret'], 'HS256'));
+				$userRole = $decoded->rol ?? null;
+			} catch (Exception $e) {
+				http_response_code(401);
+				echo json_encode(['error' => 'Token inválido o expirado']);
+				exit;
+			}
+		} else {
+			http_response_code(401);
+			echo json_encode(['error' => 'No se envió el token de autenticación']);
+			exit;
+		}
 
         // Validar permisos según el rol
-        if ($userRole === 'supervisor') {
-            // Solo puede hacer GET
-            if ($requestMethod !== 'GET') {
-                http_response_code(403);
-                echo json_encode(['error' => 'Permiso denegado para supervisores']);
-                exit;
-            }
-        } else if ($userRole !== 'admin') {
-            // Si no es admin ni supervisor, denegar
-            http_response_code(403);
-            echo json_encode(['error' => 'Rol no autorizado']);
-            exit;
-        }
+		// Validación de permisos por rol
+		$allowedMethods = [];
+		if ($userRole === 'supervisor' || $userRole === 'Supervisor') {
+			$allowedMethods = ['GET'];
+		} else if ($userRole === 'Desarrollador') {
+			$allowedMethods = ['GET', 'POST', 'PUT', 'PATCH'];
+		} else if ($userRole === 'admin' || $userRole === 'Administrador') {
+			$allowedMethods = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'];
+		} else {
+			http_response_code(403);
+			echo json_encode(['error' => 'Rol no autorizado']);
+			exit;
+		}
+		if (!in_array($requestMethod, $allowedMethods)) {
+			http_response_code(403);
+			echo json_encode(['error' => 'Permiso denegado para el rol']);
+			exit;
+		}
         // --- FIN: Validación de rol y permisos ---
     }
 

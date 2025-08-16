@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	const apiUrl = 'http://192.168.100.2:8000/categorias';
+	const apiUrl = 'http://192.168.100.177:8000/categorias';
 	const form = document.getElementById('categoriaForm');
 	const tableBody = document.getElementById('categoriasTableBody');
 	const messageDiv = document.getElementById('message');
@@ -26,7 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
 					'Authorization': 'Bearer ' + token
 				}
 			});
-			const data = await res.json();
+			let data;
+			try { data = await res.json(); } catch { data = null; }
+			if (data && data.error && (data.error.includes('Rol no autorizado') || data.error.includes('Permiso denegado') || data.error.includes('no permitido'))) {
+				showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+				alert('Tu rol no tiene permitido realizar esta acción.');
+				tableBody.innerHTML = '<tr><td colspan="3">Acceso denegado por rol</td></tr>';
+				return;
+			}
 			tableBody.innerHTML = '';
 			(data || []).forEach(cat => {
 				tableBody.innerHTML += `
@@ -52,23 +59,31 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	window.deleteCategoria = function(id) {
-		if (confirm('¿Seguro que deseas eliminar esta categoría?')) {
-			const token = localStorage.getItem('token');
-			fetch(`${apiUrl}/${id}`, {
-				method: 'DELETE',
-				headers: {
-					'Authorization': 'Bearer ' + token
-				}
-			})
-				.then(() => {
-					showMessage('Categoría eliminada');
-					fetchCategorias();
-					clearForm();
-				})
-				.catch(() => showMessage('Error al eliminar', 'error'));
-		}
-	}
-
+    if (confirm('¿Seguro que deseas eliminar esta categoría?')) {
+        const token = localStorage.getItem('token');
+        fetch(`${apiUrl}/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
+        .then(async r => {
+            let resp = null;
+            try { resp = await r.json(); } catch {}
+            if (r.ok) {
+                showMessage('Categoría eliminada');
+                fetchCategorias();
+                clearForm();
+            } else if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                alert('Tu rol no tiene permitido realizar esta acción.');
+            } else {
+                showMessage('Error al eliminar', 'error');
+            }
+        })
+        .catch(() => showMessage('Error al eliminar', 'error'));
+    }
+}
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
 		const data = {
@@ -84,11 +99,16 @@ document.addEventListener('DOMContentLoaded', function() {
 				},
 				body: JSON.stringify(data)
 			})
-			.then(r => {
+			.then(async r => {
+				let resp = null;
+				try { resp = await r.json(); } catch {}
 				if (r.ok) {
 					showMessage('Categoría actualizada');
 					fetchCategorias();
 					clearForm();
+				} else if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+					showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+					alert('Tu rol no tiene permitido realizar esta acción.');
 				} else {
 					showMessage('Error al actualizar', 'error');
 				}
@@ -103,13 +123,20 @@ document.addEventListener('DOMContentLoaded', function() {
 				},
 				body: JSON.stringify(data)
 			})
-			.then(r => r.json())
-			.then(() => {
-				showMessage('Categoría agregada');
-				fetchCategorias();
-				clearForm();
+			.then(async r => {
+				let resp = null;
+				try { resp = await r.json(); } catch {}
+				if (r.status === 201 || r.ok) {
+					showMessage('Categoría agregada');
+					fetchCategorias();
+					clearForm();
+				} else if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+					showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+					alert('Tu rol no tiene permitido realizar esta acción.');
+				} else {
+					showMessage('Error al agregar', 'error');
+				}
 			})
-			.catch(() => showMessage('Error al agregar', 'error'));
 		}
 	});
 

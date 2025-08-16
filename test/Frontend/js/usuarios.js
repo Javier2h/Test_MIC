@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('usuarioForm');
     const messageDiv = document.getElementById('message');
     const tableBody = document.getElementById('usuariosTableBody');
-    const apiUrl = 'http://192.168.100.2:8000/users';
+    const apiUrl = 'http://192.168.100.177:8000/users';
     let editId = null;
 
     function showMessage(msg, type = 'success') {
@@ -29,7 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Authorization': 'Bearer ' + token
                 }
             });
-            const data = await res.json();
+            let data;
+            try {
+                data = await res.json();
+            } catch {
+                data = null;
+            }
+            if (!res.ok && data && data.error && (data.error.includes('Rol no autorizado') || data.error.includes('Permiso denegado') || data.error.includes('no permitido'))) {
+                showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                alert('Tu rol no tiene permitido realizar esta acción.');
+                tableBody.innerHTML = '<tr><td colspan="4">Acceso denegado por rol</td></tr>';
+                return;
+            }
+            if (data && data.error && (data.error.includes('Rol no autorizado') || data.error.includes('Permiso denegado') || data.error.includes('no permitido'))) {
+                showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                alert('Tu rol no tiene permitido realizar esta acción.');
+                tableBody.innerHTML = '<tr><td colspan="4">Acceso denegado por rol</td></tr>';
+                return;
+            }
             tableBody.innerHTML = '';
             (data || []).forEach(usuario => {
                 tableBody.innerHTML += `
@@ -64,10 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Authorization': 'Bearer ' + localStorage.getItem('token')
                 }
             })
-                .then(() => {
-                    showMessage('Usuario eliminado');
-                    fetchUsuarios();
-                    clearForm();
+                .then(async r => {
+                    let resp = null;
+                    try { resp = await r.json(); } catch {}
+                    if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                        showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                        alert('Tu rol no tiene permitido realizar esta acción.');
+                    } else if (r.ok) {
+                        showMessage('Usuario eliminado');
+                        fetchUsuarios();
+                        clearForm();
+                    } else {
+                        showMessage('Error al eliminar', 'error');
+                    }
                 })
                 .catch(() => showMessage('Error al eliminar', 'error'));
         }
@@ -82,19 +108,24 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         if (editId) {
             fetch(`${apiUrl}/${editId}`, {
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(data)
             })
-            .then(r => {
+            .then(async r => {
+                let resp = null;
+                try { resp = await r.json(); } catch {}
                 if (r.ok) {
                     showMessage('Usuario actualizado');
                     fetchUsuarios();
                     clearForm();
                     if (form.contrasena) form.contrasena.value = '';
+                } else if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                    showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                    alert('Tu rol no tiene permitido realizar esta acción.');
                 } else {
                     showMessage('Error al actualizar', 'error');
                 }
@@ -102,23 +133,27 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(() => showMessage('Error al actualizar', 'error'));
         } else {
             fetch(apiUrl, {
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(data)
             })
-            .then(r => {
+            .then(async r => {
+                let resp = null;
+                try { resp = await r.json(); } catch {}
                 if (r.status === 201) {
                     showMessage('Usuario agregado');
                     fetchUsuarios();
                     clearForm();
                     if (form.contrasena) form.contrasena.value = '';
-                    return r.json();
+                    return resp;
+                } else if (resp && resp.error && (resp.error.includes('Rol no autorizado') || resp.error.includes('Permiso denegado') || resp.error.includes('no permitido'))) {
+                    showMessage('Tu rol no tiene permitido realizar esta acción.', 'error');
+                    alert('Tu rol no tiene permitido realizar esta acción.');
                 } else {
                     showMessage('Error al agregar', 'error');
-                    return Promise.reject();
                 }
             })
             .catch(() => showMessage('Error al agregar', 'error'));

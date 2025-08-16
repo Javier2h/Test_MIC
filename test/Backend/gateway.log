@@ -1147,3 +1147,639 @@
 2025-08-14 21:59:48 - Reenviando a: http://192.168.100.2:8002/login
 2025-08-14 22:02:53 - Acceso a microservicio 'auth' ruta: /auth/login
 2025-08-14 22:02:53 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:37:24 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:37:24 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:37:45 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:37:45 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:38:06 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:38:06 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:38:27 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:38:27 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:38:48 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:38:48 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:39:09 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:39:09 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:39:30 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:39:30 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:39:51 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:39:51 - Reenviando a: http://192.168.100.2:8002/login
+2025-08-16 02:40:13 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:40:13 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:40:13 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:40:13 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:40:13 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:40:13 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:42:02 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:42:02 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:44:23 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:44:23 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:46:31 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:46:31 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:47:35 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 02:47:35 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 02:57:20 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 02:57:20 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 02:57:28 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 02:57:28 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:02:16 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:02:16 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:02:58 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:02:58 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:03:57 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:03:57 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:04:00 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:04:00 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:04:03 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:03 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:07 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:07 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:07 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:07 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:11 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:11 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:14 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:14 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:18 - Acceso a microservicio 'categorias' ruta: /categorias/0
+2025-08-16 03:04:18 - Reenviando a: http://192.168.100.177:8001/categorias/0
+2025-08-16 03:04:18 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:18 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:24 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:24 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:04:24 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:04:24 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:05:25 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:05:25 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:05:53 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:05:53 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:05:55 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:05:55 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:05:57 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:05:57 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:05:57 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:05:57 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:01 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:01 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:04 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:04 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:19 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:19 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:21 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:21 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:30 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:30 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:33 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:33 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:39 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:39 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:06:48 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:06:48 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:07:36 - Acceso a microservicio 'categorias' ruta: /categorias/0
+2025-08-16 03:07:36 - Reenviando a: http://192.168.100.177:8001/categorias/0
+2025-08-16 03:07:36 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:07:36 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:08:19 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:08:19 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:08:19 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:08:19 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:09:03 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:09:03 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:11:10 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:11:10 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:11:15 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:11:15 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:13:05 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:13:05 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:13:08 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:08 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:16 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:16 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:16 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:16 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:28 - Acceso a microservicio 'users' ruta: /users/5
+2025-08-16 03:13:28 - Reenviando a: http://192.168.100.177:8005/users/5
+2025-08-16 03:13:28 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:28 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:33 - Acceso a microservicio 'users' ruta: /users/5
+2025-08-16 03:13:33 - Reenviando a: http://192.168.100.177:8005/users/5
+2025-08-16 03:13:33 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:33 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:49 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:49 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:49 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:13:49 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:13:56 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:13:56 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:14:02 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:14:02 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:14:07 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:14:07 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:14:22 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:14:22 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:16:11 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:16:11 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:16:13 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:16:13 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:16:34 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:16:34 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:17:00 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:17:00 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:17:03 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:17:03 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:17:10 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:17:10 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:17:13 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:17:13 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:17:19 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:17:19 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:17:23 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:17:23 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:17:25 - Acceso a microservicio 'categorias' ruta: /categorias/0
+2025-08-16 03:17:25 - Reenviando a: http://192.168.100.177:8001/categorias/0
+2025-08-16 03:17:25 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:17:25 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:17:35 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:17:35 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:17:39 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:17:39 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:17:42 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:17:42 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:17:53 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:17:53 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:17:57 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:17:57 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:18:01 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:18:01 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:18:10 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:18:10 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:18:12 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:18:12 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:18:15 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:18:15 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:18:24 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:18:24 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:18:27 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:18:27 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:18:29 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:18:29 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:19:08 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:19:08 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:19:21 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:19:21 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:20:38 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 03:20:38 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 03:20:53 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 03:20:53 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 03:21:11 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 03:21:11 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 03:21:37 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:21:37 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:25:01 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:25:01 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:25:35 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:25:35 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:28:19 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:28:19 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:28:48 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:28:48 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:28:50 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:28:50 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:29:05 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:29:05 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:30:21 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:30:21 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:31:38 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:31:38 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:33:26 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:33:26 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:41:19 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:41:19 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:41:21 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:41:21 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:43:39 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:43:39 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:44:00 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:44:00 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:44:07 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:44:07 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:45:20 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:45:20 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:45:23 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:45:23 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:48:44 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:48:44 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:48:58 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 03:48:58 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 03:49:04 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:49:04 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:49:14 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:49:14 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:49:18 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:49:18 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:49:21 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:49:21 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:50:18 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:50:18 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:50:20 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:50:20 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:50:31 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:50:31 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:52:16 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:52:16 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:52:44 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 03:52:44 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 03:52:47 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:52:47 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:52:51 - Acceso a microservicio 'users' ruta: /users/6
+2025-08-16 03:52:51 - Reenviando a: http://192.168.100.177:8005/users/6
+2025-08-16 03:52:51 - Acceso a microservicio 'users' ruta: /users
+2025-08-16 03:52:51 - Reenviando a: http://192.168.100.177:8005/users
+2025-08-16 03:52:59 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:52:59 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:53:16 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:53:16 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:54:05 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:54:05 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:54:15 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:54:15 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:57:10 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:57:10 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 03:57:18 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 03:57:18 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:00:23 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:00:23 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:00:30 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:00:30 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:00:59 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:00:59 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:01:03 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:03 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:01:08 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:08 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:01:08 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:08 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:01:12 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:12 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:01:18 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:18 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:01:18 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:18 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:01:22 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:01:22 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:02:18 - Acceso a microservicio 'clientes' ruta: /clientes/0
+2025-08-16 04:02:18 - Reenviando a: http://192.168.100.177:8003/clientes/0
+2025-08-16 04:02:18 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:02:18 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:02:55 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 04:02:55 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 04:02:58 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:02:58 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:03:26 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:03:26 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:04:04 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 04:04:04 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 04:04:08 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:04:08 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:05:58 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:05:58 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:06:04 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:06:04 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:06:04 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:06:04 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:06:10 - Acceso a microservicio 'clientes' ruta: /clientes/4
+2025-08-16 04:06:10 - Reenviando a: http://192.168.100.177:8003/clientes/4
+2025-08-16 04:06:10 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:06:10 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:06:21 - Acceso a microservicio 'clientes' ruta: /clientes/4
+2025-08-16 04:06:21 - Reenviando a: http://192.168.100.177:8003/clientes/4
+2025-08-16 04:06:21 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:06:21 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:06:24 - Acceso a microservicio 'clientes' ruta: /clientes/4
+2025-08-16 04:06:24 - Reenviando a: http://192.168.100.177:8003/clientes/4
+2025-08-16 04:06:24 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 04:06:24 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 04:06:30 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:06:30 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:07:48 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:07:48 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:13:19 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:13:19 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:13:19 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:13:19 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:13:33 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:13:33 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:26:07 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:26:07 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:26:07 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:26:07 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:26:14 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:26:14 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:27:12 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:27:12 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:27:12 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:27:12 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:27:26 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:27:26 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:27:26 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:27:26 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:27:28 - Acceso a microservicio 'productos' ruta: /productos/1
+2025-08-16 04:27:28 - Reenviando a: http://192.168.100.177:8004/productos/1
+2025-08-16 04:27:28 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:27:28 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:32:38 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:32:38 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:32:38 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:32:38 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:32:52 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:32:52 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:32:52 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:32:52 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:33:07 - Acceso a microservicio 'productos' ruta: /productos/5
+2025-08-16 04:33:07 - Reenviando a: http://192.168.100.177:8004/productos/5
+2025-08-16 04:33:07 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:33:07 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:33:21 - Acceso a microservicio 'productos' ruta: /productos/5
+2025-08-16 04:33:21 - Reenviando a: http://192.168.100.177:8004/productos/5
+2025-08-16 04:33:21 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:33:21 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:33:38 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:33:38 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:33:38 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:33:38 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:34:25 - Acceso a microservicio 'productos' ruta: /productos/6
+2025-08-16 04:34:25 - Reenviando a: http://192.168.100.177:8004/productos/6
+2025-08-16 04:34:25 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:34:25 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:34:39 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 04:34:39 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 04:34:44 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:34:44 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:34:44 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:34:44 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:34:50 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:34:50 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:35:11 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:35:11 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:35:13 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:35:13 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:35:14 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:35:14 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:36:37 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:36:37 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:36:37 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:36:37 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:36:50 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:36:50 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:36:50 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:36:50 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:36:55 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:36:55 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:36:55 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:36:55 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:36:57 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:36:57 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:37:12 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:37:12 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:37:33 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:37:33 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:37:33 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:37:33 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:40:36 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:40:36 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:40:36 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:40:36 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:41:03 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:41:03 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:41:03 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:41:03 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 04:41:08 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 04:41:08 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 04:41:08 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 04:41:08 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 05:18:39 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 05:18:39 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 05:18:39 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 05:18:39 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 05:18:46 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:18:46 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:19:10 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 05:19:10 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 05:19:14 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 05:19:14 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 05:19:14 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 05:19:14 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 05:19:21 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 05:19:21 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 05:19:21 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 05:19:21 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 05:19:29 - Acceso a microservicio 'productos' ruta: /productos/7
+2025-08-16 05:19:29 - Reenviando a: http://192.168.100.177:8004/productos/7
+2025-08-16 05:19:29 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 05:19:29 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 05:19:34 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:19:34 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:41:27 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:41:27 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:41:59 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:41:59 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:42:00 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:42:00 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:42:00 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:42:00 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:42:18 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:42:18 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:42:29 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:42:29 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:53:42 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:53:42 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 05:54:49 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 05:54:49 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:02:19 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:02:19 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:02:19 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:02:19 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:02:20 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:02:20 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:03:22 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:03:22 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:03:22 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:03:22 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:03:22 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:03:22 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:03:23 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:03:23 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:03:23 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:03:23 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:03:23 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:03:23 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:06:35 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:06:35 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:06:35 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:06:35 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:06:35 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:06:35 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:07:17 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:07:17 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:07:17 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:07:17 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:09:19 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:09:19 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:09:19 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:09:19 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:09:19 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:09:19 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:09:41 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:09:41 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:09:42 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:09:42 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:09:55 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:09:55 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:10:09 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:10:09 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:10:09 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:10:09 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:10:14 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:10:14 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:10:14 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:10:14 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:10:14 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:10:14 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:10:25 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:10:25 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:10:25 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:10:25 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:11:24 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:11:24 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:11:24 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:11:24 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:11:24 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:11:24 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:11:32 - Acceso a microservicio 'ordenes' ruta: /ordenes/4
+2025-08-16 06:11:32 - Reenviando a: http://192.168.100.177:8006/ordenes/4
+2025-08-16 06:11:32 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:11:32 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:11:39 - Acceso a microservicio 'ordenes' ruta: /ordenes/5
+2025-08-16 06:11:39 - Reenviando a: http://192.168.100.177:8006/ordenes/5
+2025-08-16 06:11:40 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:11:40 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:15:43 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:15:43 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:15:43 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:15:43 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:15:43 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:15:43 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:15:54 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:15:54 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:15:54 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:15:54 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:17:02 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:17:02 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:17:02 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:17:02 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:17:03 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:17:03 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:17:11 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:17:11 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:17:11 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:17:11 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:18:48 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:18:48 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:18:48 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:18:48 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:18:48 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:18:48 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:18:58 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:18:58 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:18:59 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:18:59 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:22:26 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 06:22:26 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 06:22:30 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:22:30 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:22:30 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:22:30 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:22:30 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:22:30 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:23:58 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:23:58 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:23:58 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:23:58 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:23:58 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:23:58 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:05 - Acceso a microservicio 'ordenes' ruta: /ordenes/7
+2025-08-16 06:24:05 - Reenviando a: http://192.168.100.177:8006/ordenes/7
+2025-08-16 06:24:05 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:05 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:12 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:12 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:12 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:12 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:18 - Acceso a microservicio 'ordenes' ruta: /ordenes/8
+2025-08-16 06:24:18 - Reenviando a: http://192.168.100.177:8006/ordenes/8
+2025-08-16 06:24:19 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:19 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:24 - Acceso a microservicio 'ordenes' ruta: /ordenes/8
+2025-08-16 06:24:24 - Reenviando a: http://192.168.100.177:8006/ordenes/8
+2025-08-16 06:24:24 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:24 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:33 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 06:24:33 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 06:24:37 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:24:37 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:24:37 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:24:37 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:24:37 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:37 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:24:50 - Acceso a microservicio 'categorias' ruta: /categorias
+2025-08-16 06:24:50 - Reenviando a: http://192.168.100.177:8001/categorias
+2025-08-16 06:24:50 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:24:50 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:24:54 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:24:54 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:24:55 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:24:55 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:24:55 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:24:55 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:25:01 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 06:25:01 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 06:25:05 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:25:05 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:25:05 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:25:05 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:25:06 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:25:06 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:25:17 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:25:17 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:25:17 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:25:17 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:25:25 - Acceso a microservicio 'auth' ruta: /auth/login
+2025-08-16 06:25:25 - Reenviando a: http://192.168.100.177:8002/login
+2025-08-16 06:25:28 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:25:28 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:25:29 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:25:29 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:25:29 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:25:29 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:26:38 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:26:38 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:26:38 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:26:38 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:26:38 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:26:38 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:26:54 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:26:54 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:26:54 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:26:54 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:26:54 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:26:54 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:27:48 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:27:48 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:27:48 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:27:48 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:27:48 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:27:48 - Reenviando a: http://192.168.100.177:8006/ordenes
+2025-08-16 06:27:59 - Acceso a microservicio 'clientes' ruta: /clientes
+2025-08-16 06:27:59 - Reenviando a: http://192.168.100.177:8003/clientes
+2025-08-16 06:27:59 - Acceso a microservicio 'productos' ruta: /productos
+2025-08-16 06:27:59 - Reenviando a: http://192.168.100.177:8004/productos
+2025-08-16 06:28:00 - Acceso a microservicio 'ordenes' ruta: /ordenes
+2025-08-16 06:28:00 - Reenviando a: http://192.168.100.177:8006/ordenes

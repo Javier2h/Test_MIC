@@ -16,7 +16,9 @@
             <textarea name="descripcion" placeholder="Descripción" required></textarea>
             <input type="number" name="precio" placeholder="Precio" step="0.01" required>
             <input type="number" name="stock" placeholder="Stock" required>
-            <input type="number" name="id_categoria" placeholder="ID Categoría" required>
+            <select name="id_categoria" id="id_categoria" required>
+                <option value="">Seleccione una categoría</option>
+            </select>
             <button type="submit" name="submitBtn">Agregar</button>
             <button type="button" onclick="document.getElementById('productoForm').reset();">Limpiar</button>
         </form>
