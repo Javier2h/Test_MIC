@@ -1,0 +1,6 @@
+{
+    "name": "atracciones-service",
+    "description": "Microservicio PHP para la gestión de atracciones.",
+    "type": "project",
+    "language": "php"
+}
