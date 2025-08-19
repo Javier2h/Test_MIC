@@ -5,7 +5,7 @@ return [
         'host' => 'localhost',
         'user' => 'root', // Cambia si tienes otro usuario
         'pass' => '',     // Cambia si tienes contraseña
-        'dbname' => 'panaderia2', // Cambia por el nombre de tu base de datos
+        'dbname' => 'centro_terapias', // Cambia por el nombre de tu base de datos
         'charset' => 'utf8mb4'
     ],
     'jwt' => [

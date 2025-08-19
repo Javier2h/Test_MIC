@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pacientes</title>
+    <link rel="stylesheet" href="../css/empleados.css">
+</head>
+<body>
+    <button onclick="window.location.href='menu.html'" style="margin: 20px;">Regresar al Menú</button>
+    <div class="pacientes-container">
+        <h2>Gestión de Pacientes</h2>
+        <form id="pacienteForm">
+            <input type="hidden" name="id_paciente" id="id_paciente">
+            <input type="text" name="nombre_completo" placeholder="Nombre completo" required>
+            <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+            <select name="genero" required>
+                <option value="">Seleccione género</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <input type="text" name="telefono" placeholder="Teléfono">
+            <input type="email" name="correo" placeholder="Correo electrónico">
+            <input type="text" name="direccion" placeholder="Dirección">
+            <button type="submit" name="submitBtn">Agregar</button>
+            <button type="button" onclick="document.getElementById('pacienteForm').reset();">Limpiar</button>
+        </form>
+        <div class="message" id="message"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre completo</th>
+                    <th>Fecha nacimiento</th>
+                    <th>Género</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Dirección</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="pacientesTableBody">
+                <!-- Datos aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/pacientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="../css/empleados.css">
+</head>
+<body>
+    <button onclick="window.location.href='menu.html'" style="margin: 20px;">Regresar al Menú</button>
+    <div class="terapias-container">
+        <h2>Gestión de Terapias</h2>
+        <form id="form-terapias">
+            <input type="hidden" name="id_terapia" id="id_terapia">
+            <input type="text" name="nombre_terapia" placeholder="Nombre de la Terapia" required>
+            <textarea name="descripcion" placeholder="Descripción"></textarea>
+            <input type="number" name="duracion_minutos" placeholder="Duración (minutos)" required>
+            <input type="number" name="precio" placeholder="Precio" step="0.01" required>
+            <button type="submit" name="submitBtn">Agregar</button>
+            <button type="button" id="clear-form" onclick="document.getElementById('form-terapias').reset();">Limpiar</button>
+        </form>
+        <div class="message" id="message"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Duración</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-terapias">
+                <!-- Filas dinámicas -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/terapias.js"></script>
+</body>
+</html>

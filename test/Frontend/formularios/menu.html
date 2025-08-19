@@ -17,10 +17,13 @@
 		<h2>Menú Principal</h2>
 		<ul class="menu-list">
 			<li><a href="usuarios.html">Gestión de Usuarios</a></li>
-			<li><a href="categorias.html" onclick="alert('BIENVENIDO')">Gestión de Categorías</a></li>
-			<li><a href="clientes.html" onclick="alert('Bienvenido a la Gestión de Clientes')">Gestión de Clientes</a></li>
-			<li><a href="productos.html" onclick="alert('Gestión de Productos')">Gestión de Productos</a></li>
-			<li><a href="ordenes.html" onclick="alert('Órdenes del pedido')">Órdenes del pedido</a></li>
+			<li><a href="terapeutas.html" onclick="alert('BIENVENIDO')">Gestión de Terapeutas</a></li>
+			<li><a href="pacientes.html" onclick="alert('Bienvenido a la Gestión de Pacientes')">Gestión de Pacientes</a></li>
+			<li><a href="terapias.html" onclick="alert('Gestión de Terapias')">Gestión de Terapias</a></li>
+			<li><a href="sesiones.html" onclick="alert('Gestión de Sesiones')">Gestión de Sesiones</a></li>
+			<li><a href="pagos.html" onclick="alert('Generación de pagos')">Generación de pagos</a></li>
+		    <li><a href="productos.html" onclick="alert('Generación de productos')">Generación de productos</a></li>
+
 		</ul>
 	</div>
 	<script src="../js/menu.js"></script>
@@ -38,5 +41,35 @@
 		if (rol) document.getElementById('rolUsuario').textContent = 'Rol: ' + rol;
 	});
 	</script>
+	<script>
+    function filtrarMenuPorRol() {
+        const rol = localStorage.getItem('rol');
+        const menuList = document.querySelector('.menu-list');
+        const opciones = {
+            'Supervisor': ['Gestión de Pacientes', 'Gestión de Sesiones'],
+            'Desarrollador': ['Gestión de Usuarios', 'Gestión de Terapeutas', 'Gestión de Pacientes', 'Gestión de Terapias', 'Gestión de Sesiones'],
+            'Administrador': ['Gestión de Usuarios', 'Gestión de Terapeutas', 'Gestión de Pacientes', 'Gestión de Terapias', 'Gestión de Sesiones', 'Generación de pagos', 'Generación de productos']
+        };
+
+        if (rol && opciones[rol]) {
+            const elementosPermitidos = opciones[rol];
+            Array.from(menuList.children).forEach(li => {
+                const texto = li.textContent.trim();
+                if (!elementosPermitidos.includes(texto)) {
+                    li.style.display = 'none';
+                }
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const nombre = localStorage.getItem('nombre_usuario');
+        const rol = localStorage.getItem('rol');
+        if (nombre) document.getElementById('nombreUsuario').textContent = 'Usuario: ' + nombre;
+        if (rol) document.getElementById('rolUsuario').textContent = 'Rol: ' + rol;
+
+        filtrarMenuPorRol();
+    });
+    </script>
 </body>
 </html>

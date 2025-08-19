@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Sesiones</title>
+    <link rel="stylesheet" href="../css/empleados.css">
+</head>
+<body>
+    <button onclick="window.location.href='menu.html'" style="margin: 20px;">Regresar al Menú</button>
+    <div class="sesiones-container">
+        <h2>Gestión de Sesiones</h2>
+        <form id="sesionForm">
+            <input type="hidden" name="id_sesion" id="id_sesion">
+            <label>Paciente:</label>
+            <select name="id_paciente" id="id_paciente" required>
+                <option value="">Seleccione paciente</option>
+            </select>
+            <label>Terapeuta:</label>
+            <select name="id_terapeuta" id="id_terapeuta" required>
+                <option value="">Seleccione terapeuta</option>
+            </select>
+            <label>Terapia:</label>
+            <select name="id_terapia" id="id_terapia" required>
+                <option value="">Seleccione terapia</option>
+            </select>
+            <label>Fecha:</label>
+            <input type="date" name="fecha" required>
+            <label>Hora:</label>
+            <input type="time" name="hora" required>
+            <label>Notas:</label>
+            <textarea name="notas" rows="2" placeholder="Notas adicionales"></textarea>
+            <button type="submit" name="submitBtn">Agregar</button>
+            <button type="button" onclick="document.getElementById('sesionForm').reset();">Limpiar</button>
+        </form>
+        <div class="message" id="message"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Paciente</th>
+                    <th>Terapeuta</th>
+                    <th>Terapia</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Notas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="sesionesTableBody">
+                <!-- Datos aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/sesiones.js"></script>
+</body>
+</html>

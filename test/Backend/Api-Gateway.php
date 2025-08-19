@@ -22,23 +22,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Configuración de microservicios
 $services = [
-	'categorias' => [
-		'url' => 'http://127.0.0.1:8001', // Cambia el puerto/url según tu microservicio
+	'terapeutas' => [
+		'url' => 'http://192.168.100.177:8001', // Cambia el puerto/url según tu microservicio
 	],
 	'auth' => [
-        'url' => 'http://127.0.0.1:8002', // ms-Auth en el puerto 8002
+        'url' => 'http://192.168.100.177:8002', // ms-Auth en el puerto 8002
     ],
-	'clientes' => [
-		'url' => 'http://127.0.0.1:8003', // ms-Clientes en el puerto 8003
+	'pacientes' => [
+		'url' => 'http://192.168.100.177:8003', // ms-Pacientes en el puerto 8003
 	],
-	'productos' => [
-		'url' => 'http://127.0.0.1:8004', // ms-Productos en el puerto 8004
+	'terapias' => [
+		'url' => 'http://192.168.100.177:8004', // ms-Sesiones en el puerto 8004
 	],
 	'users' => [
-		'url' => 'http://127.0.0.1:8005', // ms-Usuarios en el puerto 8005
+		'url' => 'http://192.168.100.177:8005', // ms-Usuarios en el puerto 8005
 	],
-	'ordenes' => [
-		'url' => 'http://127.0.0.1:8006', // ms-Ordenes en el puerto 8006
+	'sesiones' => [
+		'url' => 'http://192.168.100.177:8006', // ms-Sesiones en el puerto 8006
 	],
 	// Puedes agregar más microservicios aquí
 ];
@@ -112,25 +112,25 @@ if (isset($services[$serviceKey])) {
 	$subPath = implode('/', array_slice($segments, 1));
 	if ($serviceKey === 'auth') {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';
-	} else if ($serviceKey === 'categorias') {
-		// Siempre reenviamos la ruta completa a ms-atracciones
-		$forwardPath = $path; // $path ya incluye /atracciones y cualquier subruta
+	} else if ($serviceKey === 'terapeutas') {
+		// Siempre reenviamos la ruta completa a ms-terapeutas
+		$forwardPath = $path; // $path ya incluye /terapeutas y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
-	} else if ($serviceKey === 'clientes') {
-		// Siempre reenviamos la ruta completa a ms-clientes
-		$forwardPath = $path; // $path ya incluye /clientes y cualquier subruta
+	} else if ($serviceKey === 'pacientes') {
+		// Siempre reenviamos la ruta completa a ms-pacientes
+		$forwardPath = $path; // $path ya incluye /pacientes y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
-	} else if ($serviceKey === 'productos') {
-		// Siempre reenviamos la ruta completa a ms-productos
-		$forwardPath = $path; // $path ya incluye /productos y cualquier subruta
+	} else if ($serviceKey === 'sesiones') {
+		// Siempre reenviamos la ruta completa a ms-sesiones
+		$forwardPath = $path; // $path ya incluye /sesiones y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
 	} else if ($serviceKey === 'users') {
 		// Siempre reenviamos la ruta completa a ms-users
 		$forwardPath = $path; // $path ya incluye /users y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
-	} else if ($serviceKey === 'ordenes') {
-		// Siempre reenviamos la ruta completa a ms-ordenes
-		$forwardPath = $path; // $path ya incluye /ordenes y cualquier subruta
+	} else if ($serviceKey === 'terapias') {
+		// Siempre reenviamos la ruta completa a ms-terapias
+		$forwardPath = $path; // $path ya incluye /terapias y cualquier subruta
 		$serviceUrl .= '/' . $forwardPath;
 	} else {
 		$serviceUrl .= $subPath ? '/' . $subPath : '';
